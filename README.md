@@ -1,6 +1,7 @@
 # ProyectoFullstack
-Este proyecto es sobre una agencia/empresa de venta de motos, con proceso de factura, pago y envío incluído.
-Este proyecto fue creado por Matías Mendoza Tilleria y José Saavedra Pacheco
+Este proyecto es sobre una agencia/empresa de venta de motos, basada en arquitectura de datos en microservicios. Va incluído dentro del proyecto lo que es el procesamiento pagos en Venta la cuál extrae datos de cliente, inventario, moto y pago. Envío trabaja con extracción de datos de transporte y destino.
+
+Este proyecto fue creado por Matías Mendoza Tilleria y José Saavedra Pacheco.
 
 Lista puertos en uso:
 
@@ -27,6 +28,8 @@ Lista puertos en uso:
 
 Microservicios con Feign ("getters")
 
+  Venta - Extrae datos de Cliente, Inventario, Moto y Pago.
+
   Envio - Extrae datos de Transporte y Destino
 
   Factura - Extrae datos de Cliente
@@ -34,4 +37,4 @@ Microservicios con Feign ("getters")
   Pago - Extrae datos de Cliente
 
 Procedimiento:
-El orden de puerto (1-9) indica el orden en el que debe ser ejecutado y objeto creado
+El proyecto se debe ejecutar acorde a su orden de puertos (No es obligatorio, pero se recomienda para su comprensión) con la creación de objetos hecha a través de POSTMAN y su visualización a través de MySQL (Preferentemente MySQL Workbench). (Para comprobar todos los metodos de controller, debe comprobarse con los url declarados a través de POSTMAN)
