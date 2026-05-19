@@ -32,3 +32,6 @@ Microservicios con Feign ("getters")
   Factura - Extrae datos de Cliente
   
   Pago - Extrae datos de Cliente
+
+Procedimiento:
+El orden de puerto (1-9) indica el orden en el que debe ser ejecutado y objeto creado
