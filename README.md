@@ -3,6 +3,7 @@ Este proyecto es sobre una agencia/empresa de venta de motos, con proceso de fac
 Este proyecto fue creado por Matías Mendoza Tilleria y José Saavedra Pacheco
 
 Lista puertos en uso:
+
   http://localhost:8081/api/v1/clientes
   
   http://localhost:8082/api/v1/motos
@@ -22,8 +23,12 @@ Lista puertos en uso:
   http://localhost:8089/api/v1/destino/{id} //ESTE MS NO SE USA CON FINDALL, ES POR {id}
   
   http://localhost:8090/api/v1/envios
+  
 
 Microservicios con Feign ("getters")
+
   Envio - Extrae datos de Transporte y Destino
+
   Factura - Extrae datos de Cliente
+  
   Pago - Extrae datos de Cliente
