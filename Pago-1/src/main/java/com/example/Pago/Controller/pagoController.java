@@ -1,45 +1,46 @@
 package com.example.Pago.Controller;
 
 import java.util.List;
+import java.util.Map;
 
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import lombok.RequiredArgsConstructor;
 
 import com.example.Pago.Model.Pago;
-import com.example.Pago.Model.DTO.PagoResponseDTO;
 import com.example.Pago.Service.pagoService;
 
 @RestController
 @RequestMapping("/api/v1/pagos")
 @RequiredArgsConstructor
 public class pagoController {
+    @Autowired
+    private final pagoService serv;
 
-    private final pagoService service;
-
-    // CREAR PAGO
-    @PostMapping
-    public ResponseEntity<PagoResponseDTO> save(@RequestBody Pago pago) {
-        return ResponseEntity.ok(service.proceso(pago));
-    }
-
-    // LISTAR
     @GetMapping
-    public ResponseEntity<List<PagoResponseDTO>> listar() {
-        return ResponseEntity.ok(service.listar());
+    public List<Pago> getAll() {
+        return serv.findAll();
+    }   
+
+    @GetMapping("/{id}")
+    public Map<String, Object> obtenerEnvioDetallado(@PathVariable Long id) {
+        return serv.obtenerPagoConDetalles(id);
     }
 
-    //  BUSCAR POR ID
-    @GetMapping("/{id}")
-    public ResponseEntity<?> buscar(@PathVariable Long id) {
+    @PostMapping
+    public Pago guardar(@RequestBody Pago pago) {
+        return serv.save(pago);
+    }
 
-        PagoResponseDTO pago = service.buscarPorId(id);
+    @PutMapping("/{id}")
+    public Pago actualizar(@PathVariable Long id, @RequestBody Pago pago) {
+        pago.setId(id);
+        return serv.update(pago);
+    }
 
-        if (pago == null) {
-            return ResponseEntity.badRequest().body("No encontrado");
-        }
-
-        return ResponseEntity.ok(pago);
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Long id) {
+        serv.deleteById(id);
     }
 }

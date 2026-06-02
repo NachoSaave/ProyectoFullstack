@@ -1,11 +1,16 @@
 package com.example.Pago.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import com.example.Pago.Client.ClienteFeingClient;
+import com.example.Pago.Client.MotoFeingClient;
 import com.example.Pago.Model.Pago;
 import com.example.Pago.Model.DTO.*;
 import com.example.Pago.Repository.pagoRepository;
@@ -14,58 +19,49 @@ import com.example.Pago.Repository.pagoRepository;
 @RequiredArgsConstructor
 @Slf4j
 public class pagoService {
+    @Autowired
+    private  pagoRepository repo;
+    @Autowired
+    private ClienteFeingClient cliClient;
 
-    private final pagoRepository repository;
+    @Autowired
+    private MotoFeingClient motoClient;
 
-    // CREAR PAGO
-    public PagoResponseDTO proceso(Pago pago) {
-
-        log.info("Procesando pago de cliente: " + pago.getClienteNombre());
-
-        pago.setEstado("APROBADO");
-
-        Pago saved = repository.save(pago);
-
-        return toDTO(saved);
+    //guardar
+    public Pago save(Pago pago) {
+        return repo.save(pago);
+    }
+    //listar
+    public List<Pago> findAll() {
+        return repo.findAll();
+    }
+    //eliminar
+    public void deleteById(Long id) {
+        repo.deleteById(id);
+    }
+    //actualizar
+    public Pago update(Pago pago) {
+        return repo.save(pago);
+    }
+    //buscar por id
+    public Pago findById(Long id) {
+        return repo.findById(id).orElse(null);
     }
 
-    //  CONVERTIR ENTITY → DTO
-    public PagoResponseDTO toDTO(Pago saved) {
+    public Map<String, Object> obtenerPagoConDetalles(Long id) {
+        Pago pago = repo.findById(id).orElse(null);
+            
+        Map<String, Object> respuesta = new HashMap<>();
+        if(pago != null) {
 
-        PagoResponseDTO dto = new PagoResponseDTO();
+            ClienteDTO cliDto =cliClient.getClienteById(pago.getClienteId());
+            MotoDTO moDTO = motoClient.getMotoById(pago.getMotoId());
 
-        dto.setId(saved.getId());
-        dto.setSaleId(saved.getSaleId());
-        dto.setMonto(saved.getMonto());
-        dto.setMetodoPago(saved.getMetodoPago());
-        dto.setEstado(saved.getEstado());
-
-        ClienteDTO cliente = new ClienteDTO();
-        cliente.setId(saved.getClienteId());
-        cliente.setNombre(saved.getClienteNombre());
-        cliente.setTelefono(saved.getClienteTelefono());
-
-        dto.setCliente(cliente);
-
-        return dto;
-    }
-
-    //  LISTAR
-    public List<PagoResponseDTO> listar() {
-
-        return repository.findAll()
-                .stream()
-                .map(this::toDTO)
-                .toList();
-    }
-
-    //  BUSCAR POR ID
-    public PagoResponseDTO buscarPorId(Long id) {
-
-        Pago pago = repository.findById(id).orElse(null);
-
-        if (pago == null) return null;
-
-        return toDTO(pago);
+            respuesta.put("pago", pago);
+            respuesta.put("cliente", cliDto);
+            respuesta.put("moto", moDTO);
+        }
+        
+        return respuesta;
     }
 }
