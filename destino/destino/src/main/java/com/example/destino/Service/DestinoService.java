@@ -3,7 +3,8 @@ package com.example.destino.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.destino.Model.Destino;
-import com.example.destino.Receptor.DestinoRepository;
+import com.example.destino.Repository.DestinoRepository;
+
 import java.util.List;
 
 @Service
