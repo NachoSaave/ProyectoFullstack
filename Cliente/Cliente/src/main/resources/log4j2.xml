@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration status="WARN">
-    <appenders>
+<Configuration status="WARN">
+    <Appenders>
+
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-    </appenders>
-    <loggers>
-        <root level="info">
-            <appender-ref ref="Console"/>
-        </root>
-    </loggers>
-</configuration>
+
+        <File name="FileAppender" fileName="log.txt" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
