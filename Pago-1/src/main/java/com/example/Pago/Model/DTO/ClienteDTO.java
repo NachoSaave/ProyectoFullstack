@@ -3,6 +3,7 @@ package com.example.Pago.Model.DTO;
 import lombok.Data;
 
 @Data
+
 public class ClienteDTO {
     private Long id;
     private String nombre;

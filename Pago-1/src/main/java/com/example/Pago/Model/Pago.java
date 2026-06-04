@@ -11,6 +11,7 @@ import lombok.Setter;
 @Table(name = "pagos")
 @Getter
 @Setter
+
 public class Pago {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,14 +19,6 @@ public class Pago {
 
     private Long saleId;
 
-    private Double monto;
-
-    private String metodoPago;
-
-    private String estado;
-
     private Long clienteId;
-    private String clienteNombre;
-    private String clienteTelefono;
-    
+    private Long MotoId;
 }
