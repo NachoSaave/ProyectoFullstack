@@ -38,3 +38,5 @@ Microservicios con Feign ("getters")
 
 Procedimiento:
 El proyecto se debe ejecutar acorde a su orden de puertos (No es obligatorio, pero se recomienda para su comprensión) con la creación de objetos hecha a través de POSTMAN y su visualización a través de MySQL (Preferentemente MySQL Workbench). (Para comprobar todos los metodos de controller, debe comprobarse con los url declarados a través de POSTMAN)
+
+Ahora los md están actuando con eureka (puerto automatico), para verlas en eureka, hay que iniciar eureka-server

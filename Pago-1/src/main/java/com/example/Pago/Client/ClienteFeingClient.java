@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.Pago.Model.DTO.ClienteDTO;
 @FeignClient(
-        name = "Cliente",
-        url = "http://localhost:8081"
+        name = "Cliente"
 )
 public interface ClienteFeingClient {
     @GetMapping("/api/v1/clientes/{id}")
