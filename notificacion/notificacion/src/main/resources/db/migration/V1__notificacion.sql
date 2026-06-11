@@ -1,5 +1,0 @@
-CREATE TABLE notificaciones(
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    mensaje VARCHAR(500) NOT NULL,
-    tipo VARCHAR(20) NOT NULL
-)
