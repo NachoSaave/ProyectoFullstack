@@ -534,3 +534,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2026-06-11T10:59:09.377-04:00  INFO 19836 --- [Cliente] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
 2026-06-11T10:59:09.386-04:00  INFO 19836 --- [Cliente] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CLIENTE/PVAWSB03LC0407.duoc.acad:Cliente:8081 - registration status: 204
 2026-06-11T10:59:09.401-04:00  INFO 19836 --- [Cliente] [main] com.example.Cliente.ClienteApplication   : Started ClienteApplication in 7.132 seconds (process running for 7.802)
+2026-06-11T11:04:09.081-04:00  INFO 19836 --- [Cliente] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
