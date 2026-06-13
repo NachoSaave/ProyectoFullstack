@@ -1659,3 +1659,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2026-06-12T23:05:52.465-04:00  INFO 23200 --- [Cliente] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
 2026-06-12T23:05:52.465-04:00  INFO 23200 --- [Cliente] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
 2026-06-12T23:05:52.495-04:00  INFO 23200 --- [Cliente] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-12T23:08:22.129-04:00  INFO 23200 --- [Cliente] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
