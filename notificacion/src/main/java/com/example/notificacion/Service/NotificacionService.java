@@ -23,9 +23,10 @@ public class NotificacionService {
         return repo.findAll();
     }
     //eliminar noti
-    public void eliminarNoti(Notificacion noti){
-        repo.delete(noti);
+    public void eliminarNoti(Long id){
+        repo.deleteById(id);
     }
+    
     //actualizar noti
     public Notificacion actualizarNoti(Notificacion noti){
         return repo.save(noti);

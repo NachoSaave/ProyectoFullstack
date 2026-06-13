@@ -1,0 +1,2 @@
+2026-06-12T23:03:48.186-04:00  INFO 16916 --- [inventory] [main] i.inventory.InventoryApplication         : Starting InventoryApplication using Java 21.0.10 with PID 16916 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-12T23:03:48.189-04:00  INFO 16916 --- [inventory] [main] i.inventory.InventoryApplication         : No active profile set, falling back to 1 default profile: "default"

@@ -1,0 +1,2 @@
+2026-06-12T23:04:22.950-04:00  INFO 27804 --- [transporte] [main] c.e.transporte.TransporteApplication     : Starting TransporteApplication using Java 21.0.10 with PID 27804 (C:\Users\GAMER\Downloads\ProyectoFullstack\transporte\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-12T23:04:22.953-04:00  INFO 27804 --- [transporte] [main] c.e.transporte.TransporteApplication     : No active profile set, falling back to 1 default profile: "default"

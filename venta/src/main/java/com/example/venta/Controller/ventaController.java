@@ -10,7 +10,9 @@ import com.example.venta.Model.venta;
 import com.example.venta.Service.ventaService;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/ventas")
 @RequiredArgsConstructor
@@ -20,6 +22,7 @@ public class ventaController {
 
     @PostMapping
     public ResponseEntity<?> crearVenta(@RequestBody VentaSolicitudDTO dto) {
+        log.info("INFORMACION: Creando venta con datos: {}", dto);
         try {
             venta nueva = service.crearVenta(dto);
             return ResponseEntity.ok(nueva);
@@ -30,11 +33,13 @@ public class ventaController {
 
     @GetMapping
     public ResponseEntity<List<venta>> listar() {
+        log.info("INFORMACION: Obteniendo lista de ventas");
         return ResponseEntity.ok(service.listar());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> buscar(@PathVariable Long id) {
+        log.info("INFORMACION: Buscando venta con ID: {}", id);
 
         venta v = service.buscarPorId(id);
 
@@ -47,6 +52,7 @@ public class ventaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminar(@PathVariable Long id) {
+        log.info("INFORMACION: Eliminando venta con ID: {}", id);
         service.eliminar(id);
         return ResponseEntity.ok("Eliminada");
     }

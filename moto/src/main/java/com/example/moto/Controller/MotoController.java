@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.moto.Model.Moto;
 import com.example.moto.Service.MotoService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/motos")
 public class MotoController {
@@ -23,31 +26,25 @@ public class MotoController {
 
     @GetMapping
     public List<Moto> mostrarMotos(){
+        log.info("INFORMACION: Obteniendo lista de motos");
         return serv.mostrar();
     }
 
     @PostMapping
     public Moto guardar(@RequestBody Moto moto){
+        log.info("INFORMACION: Guardando nueva moto con marca: {}, modelo: {}", moto.toString());
         return serv.guardar(moto);
     }
 
     @GetMapping("/{id}") 
     public Moto buscarPorId(@PathVariable Long id){
+        log.info("INFORMACION: Buscando moto por id: {}", id);
         return serv.buscarPorId(id);
     }
 
     @PutMapping("/{id}")
     public Moto actualizar(@PathVariable Long id, @RequestBody Moto moto){
-        Moto motoExistente = serv.buscarPorId(id);
-        if (motoExistente != null) {
-            motoExistente.setMarca(moto.getMarca());
-            motoExistente.setModelo(moto.getModelo());
-            motoExistente.setPrecio(moto.getPrecio());
-            motoExistente.setAno(moto.getAno());
-            motoExistente.setCc(moto.getCc());
-            return serv.actualizar(motoExistente);
-        } else {
-            return null; 
-        }
+        log.info("INFORMACION: Actualizando moto con id: {} y datos: {}", id, moto.toString());
+        return serv.guardar(moto);
     }
 }

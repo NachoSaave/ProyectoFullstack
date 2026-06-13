@@ -1,0 +1,2 @@
+2026-06-12T23:04:14.296-04:00  INFO 21880 --- [Pago] [main] com.example.Pago.PagoApplication         : Starting PagoApplication using Java 21.0.10 with PID 21880 (C:\Users\GAMER\Downloads\ProyectoFullstack\Pago\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-12T23:04:14.299-04:00  INFO 21880 --- [Pago] [main] com.example.Pago.PagoApplication         : No active profile set, falling back to 1 default profile: "default"

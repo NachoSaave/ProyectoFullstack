@@ -1,0 +1,2 @@
+2026-06-12T23:04:05.603-04:00  INFO 11860 --- [notificacion] [main] c.e.n.NotificacionApplication            : Starting NotificacionApplication using Java 21.0.10 with PID 11860 (C:\Users\GAMER\Downloads\ProyectoFullstack\notificacion\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-12T23:04:05.607-04:00  INFO 11860 --- [notificacion] [main] c.e.n.NotificacionApplication            : No active profile set, falling back to 1 default profile: "default"

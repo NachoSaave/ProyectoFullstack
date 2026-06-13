@@ -26,13 +26,13 @@ public class ClienteController {
 
     @GetMapping("/{id}")
     public Cliente buscarPorId(@PathVariable Long id) {
-        log.info("INFORMACION: Se solicita cliente por id");
+        log.info("INFORMACION: Se solicita cliente por id {}", id);
         return serv.buscarPorId(id);
     }
 
     @PostMapping
     public Cliente crear(@RequestBody Cliente c) {
-        log.info("INFORMACION: Se crea cliente");
+        log.info("INFORMACION: Se crea cliente con los siguientes datos: {}", c.toString());
         return serv.guardar(c);
-    }
+    } 
 }

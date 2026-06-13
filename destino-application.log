@@ -1,0 +1,2 @@
+2026-06-12T23:03:23.810-04:00  INFO 11944 --- [destino] [main] com.example.destino.DestinoApplication   : Starting DestinoApplication using Java 21.0.10 with PID 11944 (C:\Users\GAMER\Downloads\ProyectoFullstack\destino\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-12T23:03:23.814-04:00  INFO 11944 --- [destino] [main] com.example.destino.DestinoApplication   : No active profile set, falling back to 1 default profile: "default"

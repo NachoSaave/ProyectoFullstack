@@ -1,0 +1,2 @@
+2026-06-12T23:03:32.784-04:00  INFO 15772 --- [Envio] [main] com.example.envio.EnvioApplication       : Starting EnvioApplication using Java 21.0.10 with PID 15772 (C:\Users\GAMER\Downloads\ProyectoFullstack\envio\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-12T23:03:32.789-04:00  INFO 15772 --- [Envio] [main] com.example.envio.EnvioApplication       : No active profile set, falling back to 1 default profile: "default"

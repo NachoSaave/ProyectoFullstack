@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.factura.Model.Factura;
 import com.example.factura.Service.FacturaService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/facturas")
 public class FacturaController {
@@ -24,32 +27,38 @@ public class FacturaController {
 
     @GetMapping
     public List<Factura> listar(){
+        log.info("INFORMACION: Se solicita lista de facturas");
         return serv.listar();
     }
 
     @PostMapping
     public Factura guardar(@RequestBody Factura factura){
+        log.info("INFORMACION: Se crea factura con los siguientes datos: {}", factura.toString());
         return serv.guardar(factura);
     }
 
     @GetMapping("/{id}")
     public Factura buscarId(@PathVariable Long id){
+        log.info("INFORMACION: Se solicita factura por id {}", id);
         return serv.buscarId(id);
     }
 
     @PutMapping("/{id}")
     public Factura actualizar(@PathVariable Long id, @RequestBody Factura factura){
+        log.info("INFORMACION: Se actualiza factura con id {} con los siguientes datos: {}", id, factura.toString());
         return serv.actualizar(factura);
     }
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id){
+        log.info("INFORMACION: Se elimina factura con id {}", id);
         serv.eliminar(id);
     }
 
     //factura + cliente
     @GetMapping("/cliente/{id}")
     public Map<String, Object> obtenerFacturaYCliente(@PathVariable Long id){
+        log.info("INFORMACION: Se solicita factura y cliente por id {}", id);
         return serv.obtenerFacturaYCliente(id);
     }
 }
