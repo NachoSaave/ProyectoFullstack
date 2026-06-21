@@ -1,0 +1,367 @@
+2026-06-20T21:26:50.080-04:00  INFO 13356 --- [inventory] [main] i.inventory.InventoryApplication         : Starting InventoryApplication using Java 21.0.10 with PID 13356 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-20T21:26:50.083-04:00  INFO 13356 --- [inventory] [main] i.inventory.InventoryApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T21:26:50.897-04:00  INFO 13356 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T21:26:50.997-04:00  INFO 13356 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2026-06-20T21:26:51.191-04:00  INFO 13356 --- [inventory] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e5a732-0fae-394b-85dc-042a0016a103
+2026-06-20T21:26:51.558-04:00  INFO 13356 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-20T21:26:51.576-04:00  INFO 13356 --- [inventory] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T21:26:51.577-04:00  INFO 13356 --- [inventory] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-20T21:26:51.650-04:00  INFO 13356 --- [inventory] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1523 ms
+2026-06-20T21:26:51.979-04:00  INFO 13356 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:26:52.372-04:00  INFO 13356 --- [inventory] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43423d40
+2026-06-20T21:26:52.374-04:00  INFO 13356 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T21:26:52.412-04:00  INFO 13356 --- [inventory] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true (MySQL 8.0)
+2026-06-20T21:26:52.457-04:00  INFO 13356 --- [inventory] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_inventory`.`flyway_schema_history` does not exist yet
+2026-06-20T21:26:52.461-04:00  INFO 13356 --- [inventory] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.024s)
+2026-06-20T21:26:52.478-04:00  INFO 13356 --- [inventory] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_inventory`.`flyway_schema_history` ...
+2026-06-20T21:26:52.536-04:00  INFO 13356 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_inventory`: << Empty Schema >>
+2026-06-20T21:26:52.544-04:00  INFO 13356 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_inventory` to version "1 - inventory"
+2026-06-20T21:26:52.580-04:00  INFO 13356 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_inventory`, now at version v1 (execution time 00:00.013s)
+2026-06-20T21:26:52.693-04:00  INFO 13356 --- [inventory] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-20T21:26:52.745-04:00  INFO 13356 --- [inventory] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-20T21:26:53.101-04:00  INFO 13356 --- [inventory] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-20T21:26:53.170-04:00  INFO 13356 --- [inventory] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: db_inventory/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-20T21:26:53.714-04:00  INFO 13356 --- [inventory] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-20T21:26:53.748-04:00 DEBUG 13356 --- [inventory] [main] org.hibernate.SQL                        : alter table inventory add column id_moto bigint
+2026-06-20T21:26:53.766-04:00  INFO 13356 --- [inventory] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T21:26:53.824-04:00  INFO 13356 --- [inventory] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-20T21:26:54.018-04:00  WARN 13356 --- [inventory] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-20T21:26:54.050-04:00  INFO 13356 --- [inventory] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-06-20T21:26:55.466-04:00  INFO 13356 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:26:56.493-04:00  INFO 13356 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:26:56.508-04:00  INFO 13356 --- [inventory] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-20T21:26:56.541-04:00  WARN 13356 --- [inventory] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-20T21:26:56.579-04:00  INFO 13356 --- [inventory] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-20T21:26:56.601-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-20T21:26:56.605-04:00  INFO 13356 --- [inventory] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T21:26:56.616-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-20T21:26:56.617-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-20T21:26:56.617-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-20T21:26:56.617-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-20T21:26:56.617-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-20T21:26:56.617-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-20T21:26:56.617-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-20T21:26:56.828-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-20T21:26:56.830-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-20T21:26:56.832-04:00  INFO 13356 --- [inventory] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-20T21:26:56.833-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782005216832 with initial instances count: 2
+2026-06-20T21:26:56.835-04:00  INFO 13356 --- [inventory] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORY with eureka with status UP
+2026-06-20T21:26:56.835-04:00  INFO 13356 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782005216835, current=UP, previous=STARTING]
+2026-06-20T21:26:56.837-04:00  INFO 13356 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083: registering service...
+2026-06-20T21:26:56.852-04:00  INFO 13356 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-20T21:26:56.853-04:00  INFO 13356 --- [inventory] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-20T21:26:56.860-04:00  INFO 13356 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083 - registration status: 204
+2026-06-20T21:26:57.863-04:00  INFO 13356 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:26:57.869-04:00  INFO 13356 --- [inventory] [main] i.inventory.InventoryApplication         : Started InventoryApplication in 9.185 seconds (process running for 9.679)
+2026-06-20T21:28:47.285-04:00  INFO 18688 --- [inventory] [main] i.inventory.InventoryApplication         : Starting InventoryApplication using Java 21.0.10 with PID 18688 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-20T21:28:47.288-04:00  INFO 18688 --- [inventory] [main] i.inventory.InventoryApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T21:28:48.091-04:00  INFO 18688 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T21:28:48.192-04:00  INFO 18688 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
+2026-06-20T21:28:48.406-04:00  INFO 18688 --- [inventory] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e5a732-0fae-394b-85dc-042a0016a103
+2026-06-20T21:28:48.825-04:00  INFO 18688 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-20T21:28:48.838-04:00  INFO 18688 --- [inventory] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T21:28:48.839-04:00  INFO 18688 --- [inventory] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-20T21:28:48.905-04:00  INFO 18688 --- [inventory] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1570 ms
+2026-06-20T21:28:49.183-04:00  INFO 18688 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:28:49.456-04:00  INFO 18688 --- [inventory] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@669c2b07
+2026-06-20T21:28:49.459-04:00  INFO 18688 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T21:28:49.498-04:00  INFO 18688 --- [inventory] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true (MySQL 8.0)
+2026-06-20T21:28:49.570-04:00  WARN 18688 --- [inventory] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2026-06-20T21:28:49.571-04:00  INFO 18688 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-20T21:28:49.614-04:00  INFO 18688 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-20T21:28:49.617-04:00  INFO 18688 --- [inventory] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-20T21:28:49.626-04:00  INFO 18688 --- [inventory] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-20T21:28:49.647-04:00 ERROR 18688 --- [inventory] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at inventory.inventory.InventoryApplication.main(InventoryApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:199) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-06-20T21:29:28.597-04:00  INFO 21588 --- [inventory] [main] i.inventory.InventoryApplication         : Starting InventoryApplication using Java 21.0.10 with PID 21588 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-20T21:29:28.600-04:00  INFO 21588 --- [inventory] [main] i.inventory.InventoryApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T21:29:29.355-04:00  INFO 21588 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T21:29:29.454-04:00  INFO 21588 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interface.
+2026-06-20T21:29:29.653-04:00  INFO 21588 --- [inventory] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e5a732-0fae-394b-85dc-042a0016a103
+2026-06-20T21:29:30.027-04:00  INFO 21588 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-20T21:29:30.040-04:00  INFO 21588 --- [inventory] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T21:29:30.040-04:00  INFO 21588 --- [inventory] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-20T21:29:30.102-04:00  INFO 21588 --- [inventory] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1455 ms
+2026-06-20T21:29:30.379-04:00  INFO 21588 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:29:30.677-04:00  INFO 21588 --- [inventory] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@669c2b07
+2026-06-20T21:29:30.679-04:00  INFO 21588 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T21:29:30.726-04:00  INFO 21588 --- [inventory] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true (MySQL 8.0)
+2026-06-20T21:29:30.795-04:00  WARN 21588 --- [inventory] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2026-06-20T21:29:30.796-04:00  INFO 21588 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-20T21:29:30.841-04:00  INFO 21588 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-20T21:29:30.845-04:00  INFO 21588 --- [inventory] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-20T21:29:30.852-04:00  INFO 21588 --- [inventory] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-20T21:29:30.866-04:00 ERROR 21588 --- [inventory] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at inventory.inventory.InventoryApplication.main(InventoryApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 98898823
+-> Resolved locally    : -416523681
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:199) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-06-20T21:30:29.812-04:00  INFO 3068 --- [inventory] [main] i.inventory.InventoryApplication         : Starting InventoryApplication using Java 21.0.10 with PID 3068 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-20T21:30:29.815-04:00  INFO 3068 --- [inventory] [main] i.inventory.InventoryApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T21:30:30.556-04:00  INFO 3068 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T21:30:30.654-04:00  INFO 3068 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
+2026-06-20T21:30:30.882-04:00  INFO 3068 --- [inventory] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e5a732-0fae-394b-85dc-042a0016a103
+2026-06-20T21:30:31.341-04:00  INFO 3068 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-20T21:30:31.356-04:00  INFO 3068 --- [inventory] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T21:30:31.356-04:00  INFO 3068 --- [inventory] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-20T21:30:31.429-04:00  INFO 3068 --- [inventory] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1569 ms
+2026-06-20T21:30:31.770-04:00  INFO 3068 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:30:32.226-04:00  INFO 3068 --- [inventory] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4eb1943b
+2026-06-20T21:30:32.228-04:00  INFO 3068 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T21:30:32.278-04:00  INFO 3068 --- [inventory] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true (MySQL 8.0)
+2026-06-20T21:30:32.319-04:00  INFO 3068 --- [inventory] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_inventory`.`flyway_schema_history` does not exist yet
+2026-06-20T21:30:32.322-04:00  INFO 3068 --- [inventory] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2026-06-20T21:30:32.343-04:00  INFO 3068 --- [inventory] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_inventory`.`flyway_schema_history` ...
+2026-06-20T21:30:32.413-04:00  INFO 3068 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_inventory`: << Empty Schema >>
+2026-06-20T21:30:32.423-04:00  INFO 3068 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_inventory` to version "1 - inventory"
+2026-06-20T21:30:32.466-04:00  INFO 3068 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_inventory`, now at version v1 (execution time 00:00.016s)
+2026-06-20T21:30:32.593-04:00  INFO 3068 --- [inventory] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-20T21:30:32.659-04:00  INFO 3068 --- [inventory] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-20T21:30:33.088-04:00  INFO 3068 --- [inventory] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-20T21:30:33.167-04:00  INFO 3068 --- [inventory] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: db_inventory/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-20T21:30:33.787-04:00  INFO 3068 --- [inventory] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-20T21:30:33.823-04:00  INFO 3068 --- [inventory] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T21:30:33.888-04:00  INFO 3068 --- [inventory] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-20T21:30:34.150-04:00  WARN 3068 --- [inventory] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-20T21:30:34.186-04:00  INFO 3068 --- [inventory] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-06-20T21:30:35.663-04:00  INFO 3068 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:30:36.687-04:00  INFO 3068 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:30:36.706-04:00  INFO 3068 --- [inventory] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-20T21:30:36.748-04:00  WARN 3068 --- [inventory] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-20T21:30:36.795-04:00  INFO 3068 --- [inventory] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-20T21:30:36.821-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-20T21:30:36.825-04:00  INFO 3068 --- [inventory] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T21:30:36.836-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-20T21:30:36.836-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-20T21:30:36.836-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-20T21:30:36.836-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-20T21:30:36.836-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-20T21:30:36.837-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-20T21:30:36.837-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-20T21:30:37.091-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-20T21:30:37.093-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-20T21:30:37.095-04:00  INFO 3068 --- [inventory] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-20T21:30:37.097-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782005437096 with initial instances count: 3
+2026-06-20T21:30:37.100-04:00  INFO 3068 --- [inventory] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORY with eureka with status UP
+2026-06-20T21:30:37.101-04:00  INFO 3068 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782005437101, current=UP, previous=STARTING]
+2026-06-20T21:30:37.103-04:00  INFO 3068 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083: registering service...
+2026-06-20T21:30:37.121-04:00  INFO 3068 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-20T21:30:37.122-04:00  INFO 3068 --- [inventory] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-20T21:30:37.129-04:00  INFO 3068 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083 - registration status: 204
+2026-06-20T21:30:38.131-04:00  INFO 3068 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:30:38.139-04:00  INFO 3068 --- [inventory] [main] i.inventory.InventoryApplication         : Started InventoryApplication in 9.734 seconds (process running for 10.237)
+2026-06-20T21:33:17.065-04:00  INFO 17016 --- [inventory] [main] i.inventory.InventoryApplication         : Starting InventoryApplication using Java 21.0.10 with PID 17016 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-20T21:33:17.068-04:00  INFO 17016 --- [inventory] [main] i.inventory.InventoryApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T21:33:17.924-04:00  INFO 17016 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T21:33:18.025-04:00  INFO 17016 --- [inventory] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2026-06-20T21:33:18.281-04:00  INFO 17016 --- [inventory] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cea04b76-b372-345b-81bd-681b97c0a04f
+2026-06-20T21:33:18.714-04:00  INFO 17016 --- [inventory] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-20T21:33:18.729-04:00  INFO 17016 --- [inventory] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T21:33:18.729-04:00  INFO 17016 --- [inventory] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-20T21:33:18.799-04:00  INFO 17016 --- [inventory] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1691 ms
+2026-06-20T21:33:19.126-04:00  INFO 17016 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:33:19.602-04:00  INFO 17016 --- [inventory] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f4a605f
+2026-06-20T21:33:19.605-04:00  INFO 17016 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T21:33:19.654-04:00  INFO 17016 --- [inventory] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true (MySQL 8.0)
+2026-06-20T21:33:19.699-04:00  INFO 17016 --- [inventory] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_inventory`.`flyway_schema_history` does not exist yet
+2026-06-20T21:33:19.702-04:00  INFO 17016 --- [inventory] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.021s)
+2026-06-20T21:33:19.721-04:00  INFO 17016 --- [inventory] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_inventory`.`flyway_schema_history` ...
+2026-06-20T21:33:19.803-04:00  INFO 17016 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_inventory`: << Empty Schema >>
+2026-06-20T21:33:19.813-04:00  INFO 17016 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_inventory` to version "1 - inventory"
+2026-06-20T21:33:19.854-04:00  INFO 17016 --- [inventory] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_inventory`, now at version v1 (execution time 00:00.018s)
+2026-06-20T21:33:19.953-04:00  INFO 17016 --- [inventory] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-20T21:33:20.006-04:00  INFO 17016 --- [inventory] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-20T21:33:20.384-04:00  INFO 17016 --- [inventory] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-20T21:33:20.465-04:00  INFO 17016 --- [inventory] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_inventory?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: db_inventory/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-20T21:33:21.056-04:00  INFO 17016 --- [inventory] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-20T21:33:21.092-04:00  INFO 17016 --- [inventory] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T21:33:21.157-04:00  INFO 17016 --- [inventory] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-20T21:33:21.372-04:00  WARN 17016 --- [inventory] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-20T21:33:21.408-04:00  INFO 17016 --- [inventory] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-06-20T21:33:22.844-04:00  INFO 17016 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:33:23.870-04:00  INFO 17016 --- [inventory] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-20T21:33:23.884-04:00  INFO 17016 --- [inventory] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-20T21:33:23.913-04:00  WARN 17016 --- [inventory] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-20T21:33:23.945-04:00  INFO 17016 --- [inventory] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-20T21:33:23.965-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-20T21:33:23.968-04:00  INFO 17016 --- [inventory] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T21:33:23.976-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-20T21:33:23.976-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-20T21:33:23.976-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-20T21:33:23.977-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-20T21:33:23.977-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-20T21:33:23.977-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-20T21:33:23.977-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-20T21:33:24.199-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-20T21:33:24.201-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-20T21:33:24.202-04:00  INFO 17016 --- [inventory] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-20T21:33:24.204-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782005604202 with initial instances count: 3
+2026-06-20T21:33:24.207-04:00  INFO 17016 --- [inventory] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORY with eureka with status UP
+2026-06-20T21:33:24.207-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782005604207, current=UP, previous=STARTING]
+2026-06-20T21:33:24.209-04:00  INFO 17016 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083: registering service...
+2026-06-20T21:33:24.213-04:00  INFO 17016 --- [inventory] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORY with eureka with status DOWN
+2026-06-20T21:33:24.214-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782005604214, current=DOWN, previous=UP]
+2026-06-20T21:33:24.215-04:00  WARN 17016 --- [inventory] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-20T21:33:24.217-04:00  INFO 17016 --- [inventory] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T21:33:24.219-04:00  INFO 17016 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-20T21:33:24.225-04:00  INFO 17016 --- [inventory] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-20T21:33:24.227-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-20T21:33:24.233-04:00  INFO 17016 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083 - registration status: 204
+2026-06-20T21:33:24.233-04:00  INFO 17016 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083: registering service...
+2026-06-20T21:33:24.237-04:00  INFO 17016 --- [inventory] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083 - registration status: 204
+2026-06-20T21:33:24.238-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-20T21:33:24.246-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORY/localhost:inventory:8083 - deregister  status: 200
+2026-06-20T21:33:24.247-04:00  INFO 17016 --- [inventory] [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-20T21:33:24.256-04:00  INFO 17016 --- [inventory] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-20T21:33:24.267-04:00 ERROR 17016 --- [inventory] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8083 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
+

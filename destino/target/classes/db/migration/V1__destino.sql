@@ -1,7 +1,7 @@
 CREATE TABLE destino(
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombreCalle VARCHAR(100),
-    numeroCalle INT(5),
+    nombre_calle VARCHAR(100),
+    numero_calle INT(5),
     comuna VARCHAR(100),
     ciudad VARCHAR(100)
 )
