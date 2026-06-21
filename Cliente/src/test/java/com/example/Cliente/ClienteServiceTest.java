@@ -28,7 +28,6 @@ public class ClienteServiceTest {
     public void testListar() {
         Cliente cliente = new Cliente(); 
         when(clienteRepository.findAll()).thenReturn(List.of(cliente));
-        // Llama al método listar() del servicio.
         List<Cliente> clientes = clienteService.listar();
 
         // Verifica que la lista devuelta no sea nula y contenga exactamente un Cliente.
@@ -42,7 +41,6 @@ public class ClienteServiceTest {
         
         when(clienteRepository.save(clienteInput)).thenReturn(clienteInput);
 
-        // Llama al método guardar() del servicio.
         Cliente saved = clienteService.guardar(clienteInput);
 
         // Verifica que el Cliente guardado no sea nulo.
@@ -57,7 +55,6 @@ public class ClienteServiceTest {
         // Define el comportamiento del mock: cuando se llame a findById() con el ID, devuelve un Cliente opcional.
         when(clienteRepository.findById(id)).thenReturn(Optional.of(cliente));
 
-        // Llama al método buscarPorId() del servicio.
         Cliente found = clienteService.buscarPorId(id);
 
         // Verifica que el Cliente devuelto no sea nulo.
