@@ -13,12 +13,15 @@ import lombok.Setter;
 @Setter
 
 public class Pago {
-@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long saleId;
+    private Double monto;
+    private String metodo_pago;
+    private String estado;
 
     private Long clienteId;
-    private Long MotoId;
+    private Long motoId;
 }

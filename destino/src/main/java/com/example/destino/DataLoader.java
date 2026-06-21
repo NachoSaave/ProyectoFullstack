@@ -21,7 +21,7 @@ public class DataLoader  implements CommandLineRunner{
     public void run(String... args) throws Exception {
         if(repo.count() == 0) {
             Faker faker = new Faker(Locale.of("es", "CL"));
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
                 Destino destino = new Destino();
                 destino.setNombreCalle(faker.address().streetName());
                 destino.setNumeroCalle(faker.number().numberBetween(100,9999));

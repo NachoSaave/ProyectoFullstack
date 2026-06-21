@@ -1,0 +1,85 @@
+2026-06-21T16:43:55.168-04:00  INFO 1968 --- [transporte] [main] c.e.transporte.TransporteApplication     : Starting TransporteApplication using Java 21.0.10 with PID 1968 (C:\Users\GAMER\Downloads\ProyectoFullstack\transporte\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-21T16:43:55.171-04:00  INFO 1968 --- [transporte] [main] c.e.transporte.TransporteApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-21T16:43:55.933-04:00  INFO 1968 --- [transporte] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-21T16:43:56.033-04:00  INFO 1968 --- [transporte] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2026-06-21T16:43:56.250-04:00  INFO 1968 --- [transporte] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e7972b87-148f-3c1b-843d-9784f28cf089
+2026-06-21T16:43:56.658-04:00  INFO 1968 --- [transporte] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8088 (http)
+2026-06-21T16:43:56.672-04:00  INFO 1968 --- [transporte] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-21T16:43:56.673-04:00  INFO 1968 --- [transporte] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-21T16:43:56.738-04:00  INFO 1968 --- [transporte] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1527 ms
+2026-06-21T16:43:57.034-04:00  INFO 1968 --- [transporte] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-21T16:43:57.445-04:00  INFO 1968 --- [transporte] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c64339f
+2026-06-21T16:43:57.446-04:00  INFO 1968 --- [transporte] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-21T16:43:57.487-04:00  INFO 1968 --- [transporte] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_transportes?createDatabaseIfNotExist=true (MySQL 8.0)
+2026-06-21T16:43:57.533-04:00  INFO 1968 --- [transporte] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_transportes`.`flyway_schema_history` does not exist yet
+2026-06-21T16:43:57.537-04:00  INFO 1968 --- [transporte] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.024s)
+2026-06-21T16:43:57.554-04:00  INFO 1968 --- [transporte] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_transportes`.`flyway_schema_history` ...
+2026-06-21T16:43:57.612-04:00  INFO 1968 --- [transporte] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_transportes`: << Empty Schema >>
+2026-06-21T16:43:57.621-04:00  INFO 1968 --- [transporte] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_transportes` to version "1 - transportes"
+2026-06-21T16:43:57.665-04:00  INFO 1968 --- [transporte] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_transportes`, now at version v1 (execution time 00:00.015s)
+2026-06-21T16:43:57.771-04:00  INFO 1968 --- [transporte] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-21T16:43:57.817-04:00  INFO 1968 --- [transporte] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-21T16:43:58.158-04:00  INFO 1968 --- [transporte] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-21T16:43:58.230-04:00  INFO 1968 --- [transporte] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_transportes?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: db_transportes/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-21T16:43:58.782-04:00  INFO 1968 --- [transporte] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-21T16:43:58.817-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : create table transporte (id bigint not null auto_increment, empresa varchar(255), nombre_conductor varchar(255), tipo_transporte varchar(255), primary key (id)) engine=InnoDB
+2026-06-21T16:43:58.827-04:00  INFO 1968 --- [transporte] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-21T16:43:58.883-04:00  INFO 1968 --- [transporte] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-21T16:43:59.156-04:00  WARN 1968 --- [transporte] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-21T16:43:59.193-04:00  INFO 1968 --- [transporte] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-06-21T16:44:00.638-04:00  INFO 1968 --- [transporte] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-21T16:44:01.661-04:00  INFO 1968 --- [transporte] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-21T16:44:01.683-04:00  INFO 1968 --- [transporte] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-21T16:44:01.719-04:00  WARN 1968 --- [transporte] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-21T16:44:01.768-04:00  INFO 1968 --- [transporte] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-21T16:44:01.796-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-21T16:44:01.801-04:00  INFO 1968 --- [transporte] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T16:44:01.812-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-21T16:44:01.814-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-21T16:44:01.814-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-21T16:44:01.814-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-21T16:44:01.814-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-21T16:44:01.814-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-21T16:44:01.814-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-21T16:44:02.078-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-21T16:44:02.081-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-21T16:44:02.082-04:00  INFO 1968 --- [transporte] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-21T16:44:02.084-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782074642083 with initial instances count: 3
+2026-06-21T16:44:02.088-04:00  INFO 1968 --- [transporte] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TRANSPORTE with eureka with status UP
+2026-06-21T16:44:02.088-04:00  INFO 1968 --- [transporte] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782074642088, current=UP, previous=STARTING]
+2026-06-21T16:44:02.091-04:00  INFO 1968 --- [transporte] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TRANSPORTE/localhost:transporte:8088: registering service...
+2026-06-21T16:44:02.117-04:00  INFO 1968 --- [transporte] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8088 (http) with context path '/'
+2026-06-21T16:44:02.119-04:00  INFO 1968 --- [transporte] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2026-06-21T16:44:02.131-04:00  INFO 1968 --- [transporte] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TRANSPORTE/localhost:transporte:8088 - registration status: 204
+2026-06-21T16:44:03.133-04:00  INFO 1968 --- [transporte] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-21T16:44:03.143-04:00  INFO 1968 --- [transporte] [main] c.e.transporte.TransporteApplication     : Started TransporteApplication in 9.368 seconds (process running for 9.85)
+2026-06-21T16:44:03.394-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.432-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.438-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.443-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.448-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.454-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.460-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.469-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.475-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.482-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.489-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.495-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.501-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.509-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.515-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : insert into transporte (empresa,nombre_conductor,tipo_transporte) values (?,?,?)
+2026-06-21T16:44:03.645-04:00 DEBUG 1968 --- [transporte] [main] org.hibernate.SQL                        : select t1_0.id,t1_0.empresa,t1_0.nombre_conductor,t1_0.tipo_transporte from transporte t1_0
+2026-06-21T16:49:01.821-04:00  INFO 1968 --- [transporte] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T16:54:01.823-04:00  INFO 1968 --- [transporte] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T16:59:01.827-04:00  INFO 1968 --- [transporte] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

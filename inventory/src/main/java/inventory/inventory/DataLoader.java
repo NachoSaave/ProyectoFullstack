@@ -18,7 +18,7 @@ public class DataLoader implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         Faker faker = new Faker();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             inventory inv = new inventory();
             inv.setIdMoto((long) faker.number().numberBetween(1, 100));
             inv.setStock(faker.number().numberBetween(1, 100));
@@ -27,5 +27,4 @@ public class DataLoader implements CommandLineRunner{
         repo.flush();
         List<inventory> inventorys = repo.findAll();    
     }
-
 }

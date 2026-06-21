@@ -18,10 +18,9 @@ public class DataLoader implements CommandLineRunner{
     
     @Override
     public void run(String... args) throws Exception {
-    // Solo meter datos falsos si la base de datos está totalmente vacía
     if (repo.count() == 0) {
         Faker faker = new Faker();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             Cliente cliente = new Cliente();
             cliente.setNombre(faker.name().fullName());
             cliente.setTelefono(faker.phoneNumber().cellPhone());

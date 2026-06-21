@@ -24,5 +24,5 @@ public class Moto {
     private String modelo;
     private Double precio;
     private int ano;
-    private String cc;
+    private int cc;
 }
