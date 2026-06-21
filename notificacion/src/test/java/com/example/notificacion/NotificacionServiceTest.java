@@ -12,10 +12,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.example.notificacion.Model.Notificacion;
 import com.example.notificacion.Repository.NotificacionRepository;
 import com.example.notificacion.Service.NotificacionService;
+@ActiveProfiles("test")
 @SpringBootTest
 public class NotificacionServiceTest {
 @Autowired

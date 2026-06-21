@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.example.Pago.Client.ClienteFeingClient;
 import com.example.Pago.Client.MotoFeingClient;
@@ -19,7 +20,7 @@ import com.example.Pago.Model.DTO.ClienteDTO;
 import com.example.Pago.Model.DTO.MotoDTO;
 import com.example.Pago.Repository.pagoRepository;
 import com.example.Pago.Service.pagoService;
-
+@ActiveProfiles("test")
 @SpringBootTest
 public class PagoServiceTest {
 

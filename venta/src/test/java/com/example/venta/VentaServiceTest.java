@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.example.venta.Client.ClienteFeignClient;
 import com.example.venta.Client.InventarioFeingClient;
@@ -24,7 +25,7 @@ import com.example.venta.Model.Dto.VentaSolicitudDTO;
 import com.example.venta.Model.venta;
 import com.example.venta.Repository.ventaRepository;
 import com.example.venta.Service.ventaService;
-
+@ActiveProfiles("test")
 @SpringBootTest
 public class VentaServiceTest {
 

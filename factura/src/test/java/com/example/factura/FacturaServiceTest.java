@@ -14,12 +14,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.example.factura.Client.ClienteFeignClient;
 import com.example.factura.Model.Factura;
 import com.example.factura.Model.DTO.ClienteDTO;
 import com.example.factura.Repository.FacturaRepository;
 import com.example.factura.Service.FacturaService;
+@ActiveProfiles("test")
 @SpringBootTest
 public class FacturaServiceTest {
  @Autowired

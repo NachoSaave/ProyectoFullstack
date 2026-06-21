@@ -17,9 +17,11 @@ import com.example.destino.Model.Destino;
 import com.example.destino.Repository.DestinoRepository;
 import com.example.destino.Service.DestinoService;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 
 @SpringBootTest
+@ActiveProfiles("test")
 public class DestinoServiceTest {
     @Autowired
     private DestinoService destinoService;
