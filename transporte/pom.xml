@@ -22,7 +22,6 @@
 	</properties>
 
 	<dependencies>
-<<<<<<< HEAD
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -33,10 +32,6 @@
             <artifactId>datafaker</artifactId>
             <version>2.6.0</version>
         </dependency>
-=======
-
-		<!-- Swagger -->
->>>>>>> 2fba593acd1bc6578e5f3640f2f8493c06748764
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
