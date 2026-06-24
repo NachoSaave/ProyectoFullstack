@@ -35,4 +35,10 @@ public class ClienteController {
         log.info("INFORMACION: Se crea cliente con los siguientes datos: {}", c.toString());
         return serv.guardar(c);
     } 
+
+    @DeleteMapping
+    public void String(@PathVariable Long id){
+        log.info("INFORMACION: Se ha eliminado el cliente con id: {}", id);
+        serv.eliminar(id);
+    }
 }

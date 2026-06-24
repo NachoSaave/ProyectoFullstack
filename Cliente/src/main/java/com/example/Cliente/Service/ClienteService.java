@@ -25,4 +25,8 @@ public class ClienteService {
     public Cliente buscarPorId(Long id) {
         return repo.findById(id).orElse(null);
     }
+
+    public void eliminar(Long id){
+        repo.deleteById(id);
+    }
 }
