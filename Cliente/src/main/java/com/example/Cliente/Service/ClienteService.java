@@ -29,4 +29,8 @@ public class ClienteService {
     public void eliminar(Long id){
         repo.deleteById(id);
     }
+
+    public Cliente actualizar(Cliente c){
+        return repo.save(c);
+    }
 }

@@ -32,7 +32,7 @@ public class ClienteServiceTest {
         when(clienteRepository.findAll()).thenReturn(List.of(cliente));
         List<Cliente> clientes = clienteService.listar();
 
-        // Verifica que la lista devuelta no sea nula y contenga exactamente un Cliente.
+
         assertNotNull(clientes);
         assertEquals(1, clientes.size());
     }
@@ -44,8 +44,6 @@ public class ClienteServiceTest {
         when(clienteRepository.save(clienteInput)).thenReturn(clienteInput);
 
         Cliente saved = clienteService.guardar(clienteInput);
-
-        // Verifica que el Cliente guardado no sea nulo.
         assertNotNull(saved);
         verify(clienteRepository, times(1)).save(clienteInput);
     }
@@ -54,14 +52,10 @@ public class ClienteServiceTest {
     public void testBuscarPorId() {
         Long id = 1L;
         Cliente cliente = new Cliente();
-        // Define el comportamiento del mock: cuando se llame a findById() con el ID, devuelve un Cliente opcional.
         when(clienteRepository.findById(id)).thenReturn(Optional.of(cliente));
 
         Cliente found = clienteService.buscarPorId(id);
-
-        // Verifica que el Cliente devuelto no sea nulo.
         assertNotNull(found);
         verify(clienteRepository, times(1)).findById(id);
     }
 }
-

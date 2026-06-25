@@ -41,4 +41,10 @@ public class ClienteController {
         log.info("INFORMACION: Se ha eliminado el cliente con id: {}", id);
         serv.eliminar(id);
     }
+
+    @PutMapping
+    public Cliente actualizar(@PathVariable Long id, @RequestBody Cliente cli){
+        log.info("INFORMACION: Se ha actualizado cliente con id: {} y atributos: {}", id, cli);
+        return serv.actualizar(cli);
+    }
 }
