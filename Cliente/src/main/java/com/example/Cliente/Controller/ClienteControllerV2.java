@@ -4,6 +4,7 @@ import com.example.Cliente.Model.Cliente;
 import com.example.Cliente.Service.ClienteService;
 import com.example.Cliente.assembler.ClienteAssambler;
 
+import jakarta.ws.rs.core.Response;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.hateoas.CollectionModel;
@@ -68,4 +69,19 @@ public class ClienteControllerV2 {
 
         return ResponseEntity.noContent().build();
     }   
+
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<EntityModel<Cliente>> actualizar(
+            @PathVariable Long id,
+            @RequestBody Cliente cli) {
+
+        cli.setId(id);
+
+        Cliente clienteActualizado = serv.actualizar(cli);
+
+        return ResponseEntity.ok(
+                assembler.toModel(clienteActualizado)
+        );
+    }
+    
 }
