@@ -4,6 +4,8 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Repositoryinventory extends JpaRepository<inventario, Long> {
+import inventario.inventario.Model.inventario;
+
+public interface inventarioRepository extends JpaRepository<inventario, Long> {
 Optional<inventario> findByIdMoto(Long idMoto);
 }

@@ -1,4 +1,4 @@
-package inventory.inventory.Model;
+package inventario.inventario.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @Table(name = "inventory")
 @Getter
 @Setter
-public class inventory {
+public class inventario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

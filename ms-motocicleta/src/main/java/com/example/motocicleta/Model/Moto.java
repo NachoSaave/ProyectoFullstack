@@ -1,4 +1,4 @@
-package com.example.moto.Model;
+package com.example.motocicleta.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -13,9 +13,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.example.moto.Model.Moto;
-import com.example.moto.Repository.MotoRepository;
-import com.example.moto.Service.MotoService;
+import com.example.motocicleta.Model.Moto;
+import com.example.motocicleta.Repository.MotoRepository;
+import com.example.motocicleta.Service.MotoService;
+
+
+
 
 @SpringBootTest
 @ActiveProfiles("test")

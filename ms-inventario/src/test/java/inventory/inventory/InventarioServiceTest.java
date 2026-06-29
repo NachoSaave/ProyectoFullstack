@@ -13,9 +13,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 
-import inventory.inventory.Model.inventory;
-import inventory.inventory.Repository.Repositoryinventory;
-import inventory.inventory.Service.InventarioService;
+import inventario.inventario.Model.inventario;
+import inventario.inventario.Repository.inventarioRepository;
+import inventario.inventario.Service.InventarioService;
+
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -25,19 +26,19 @@ public class InventarioServiceTest {
     private InventarioService inventarioService;
 
     @MockBean
-    private Repositoryinventory repository;
+    private inventarioRepository repository;
 
     @Test
     public void testListar() {
 
-        inventory inv = new inventory();
+        inventario inv = new inventario();
         inv.setId(1L);
         inv.setIdMoto(100L);
         inv.setStock(15);
 
         when(repository.findAll()).thenReturn(List.of(inv));
 
-        List<inventory> lista = inventarioService.listar();
+        List<inventario> lista = inventarioService.listar();
 
         assertNotNull(lista);
         assertEquals(1, lista.size());
@@ -49,14 +50,14 @@ public class InventarioServiceTest {
     @Test
     public void testGuardar() {
 
-        inventory inv = new inventory();
+        inventario inv = new inventario();
         inv.setId(1L);
         inv.setIdMoto(100L);
         inv.setStock(15);
 
         when(repository.save(inv)).thenReturn(inv);
 
-        inventory guardado = inventarioService.guardar(inv);
+        inventario guardado = inventarioService.guardar(inv);
 
         assertNotNull(guardado);
         assertEquals(1L, guardado.getId());
@@ -71,14 +72,14 @@ public class InventarioServiceTest {
 
         Long idMoto = 100L;
 
-        inventory inv = new inventory();
+        inventario inv = new inventario();
         inv.setId(1L);
         inv.setIdMoto(idMoto);
         inv.setStock(15);
 
         when(repository.findByIdMoto(idMoto)).thenReturn(Optional.of(inv));
 
-        inventory encontrado = inventarioService.buscarPorIdMoto(idMoto);
+        inventario encontrado = inventarioService.buscarPorIdMoto(idMoto);
 
         assertNotNull(encontrado);
         assertEquals(1L, encontrado.getId());
@@ -93,7 +94,7 @@ public class InventarioServiceTest {
 
         Long idMoto = 100L;
 
-        inventory inv = new inventory();
+        inventario inv = new inventario();
         inv.setId(1L);
         inv.setIdMoto(idMoto);
         inv.setStock(15);

@@ -1,4 +1,4 @@
-package com.example.moto.Controller;
+package com.example.motocicleta.Controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.moto.Model.Moto;
-import com.example.moto.Service.MotoService;
+import com.example.motocicleta.Model.Moto;
+import com.example.motocicleta.Service.MotoService;
 
 import lombok.extern.slf4j.Slf4j;
 

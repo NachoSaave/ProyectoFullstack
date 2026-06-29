@@ -1,4 +1,4 @@
-package com.example.moto;
+package com.example.motocicleta;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.example.moto.Model.Moto;
-import com.example.moto.Repository.MotoRepository;
+import com.example.motocicleta.Model.Moto;
+import com.example.motocicleta.Repository.MotoRepository;
 
 import net.datafaker.Faker;
 

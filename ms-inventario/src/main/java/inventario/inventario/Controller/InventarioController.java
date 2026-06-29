@@ -1,11 +1,11 @@
-package inventory.inventory.Controller;
+package inventario.inventario.Controller;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 
-import inventory.inventory.Model.inventory;
-import inventory.inventory.Service.InventarioService;
+import inventario.inventario.Model.inventario;
+import inventario.inventario.Service.InventarioService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,28 +19,28 @@ public class InventarioController {
 
     // LISTAR
     @GetMapping
-    public List<inventory> listar(){
+    public List<inventario> listar(){
         log.info("INFORMACION: Se solicita lista de inventario");
         return service.listar();
     }
 
     // BUSCAR POR ID
     @GetMapping("/{idMoto}")
-    public inventory buscarPorId(@PathVariable Long idMoto){
+    public inventario buscarPorId(@PathVariable Long idMoto){
         log.info("INFORMACION: Se solicita inventario por idMoto {}", idMoto);
         return service.buscarPorIdMoto(idMoto);
     }
 
     // GUARDAR
     @PostMapping
-    public inventory guardar(@RequestBody inventory inventario){
+    public inventario guardar(@RequestBody inventario inventario){
         log.info("INFORMACION: Se crea inventario con los siguientes datos: {}", inventario.toString());
         return service.guardar(inventario);
     }
 
     // ACTUALIZAR
     @PutMapping("/{idMoto}")
-    public inventory actualizar(@PathVariable Long idMoto, @RequestBody inventory inventario){
+    public inventario actualizar(@PathVariable Long idMoto, @RequestBody inventario inventario){
         log.info("INFORMACION: Se actualiza inventario por idMoto {} con los siguientes datos: {}", idMoto, inventario.toString());
         return service.guardar(inventario);
     }
