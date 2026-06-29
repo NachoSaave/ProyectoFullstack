@@ -80,3 +80,4 @@
 2026-06-28 21:19:38 [main] DEBUG org.hibernate.SQL - insert into ventas (estado,fecha_venta,id_cliente,id_moto,total) values (?,?,?,?,?)
 2026-06-28 21:19:38 [main] DEBUG org.hibernate.SQL - insert into ventas (estado,fecha_venta,id_cliente,id_moto,total) values (?,?,?,?,?)
 2026-06-28 21:19:38 [main] DEBUG org.hibernate.SQL - select v1_0.id,v1_0.estado,v1_0.fecha_venta,v1_0.id_cliente,v1_0.id_moto,v1_0.total from ventas v1_0
+2026-06-28 21:24:37 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
