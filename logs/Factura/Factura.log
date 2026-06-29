@@ -1,0 +1,2 @@
+2026-06-28 21:18:32 [main] INFO  c.example.factura.FacturaApplication - Starting FacturaApplication using Java 24.0.2 with PID 25960 (C:\Users\GAMER\Downloads\ProyectoFullstack\factura\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-28 21:18:32 [main] INFO  c.example.factura.FacturaApplication - No active profile set, falling back to 1 default profile: "default"

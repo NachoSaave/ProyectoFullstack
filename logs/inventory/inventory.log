@@ -1,0 +1,2 @@
+2026-06-28 21:18:47 [main] INFO  i.inventory.InventoryApplication - Starting InventoryApplication using Java 24.0.2 with PID 8788 (C:\Users\GAMER\Downloads\ProyectoFullstack\inventory\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-28 21:18:47 [main] INFO  i.inventory.InventoryApplication - No active profile set, falling back to 1 default profile: "default"

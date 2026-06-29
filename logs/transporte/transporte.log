@@ -1,0 +1,2 @@
+2026-06-28 21:19:16 [main] INFO  c.e.transporte.TransporteApplication - Starting TransporteApplication using Java 24.0.2 with PID 8232 (C:\Users\GAMER\Downloads\ProyectoFullstack\transporte\target\classes started by GAMER in C:\Users\GAMER\Downloads\ProyectoFullstack)
+2026-06-28 21:19:16 [main] INFO  c.e.transporte.TransporteApplication - No active profile set, falling back to 1 default profile: "default"
