@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Pago
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_pagos?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8085
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    com.empresa.pago: DEBUG
+    org.hibernate.SQL: DEBUG
+  file:
+    name: pago-application.log

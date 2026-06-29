@@ -21,7 +21,7 @@ Lista puertos en uso:
   
   http://localhost:8088/api/v1/transportes
   
-  http://localhost:8089/api/v1/destino/{id} //ESTE MS NO SE USA CON FINDALL, ES POR {id}
+  http://localhost:8089/api/v1/destino
   
   http://localhost:8090/api/v1/envios
   
@@ -42,3 +42,5 @@ El proyecto se debe ejecutar acorde a su orden de puertos (No es obligatorio, pe
 Ahora los ms están actuando con eureka (puerto automatico), para verlas en eureka, hay que iniciar eureka-server.
 
 Todos los microservicios cuentan con log (Ver folder LOGS-log4j2), eureka (http://localhost:8761) y swanger.
+
+Todos cuentan con YAML

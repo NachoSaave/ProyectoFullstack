@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Factura
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_facturas?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8087
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    com.empresa.factura: DEBUG
+    org.hibernate.SQL: DEBUG
+  file:
+    name: factura-application.log
