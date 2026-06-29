@@ -1,6 +1,6 @@
 spring:
   application:
-    name: notificacion
+    name: NOTIFICACION
   datasource:
     url: jdbc:mysql://localhost:3306/db_notificaciones?createDatabaseIfNotExist=true
     username: root

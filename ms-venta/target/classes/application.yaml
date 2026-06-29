@@ -1,6 +1,6 @@
 spring:
   application:
-    name: venta
+    name: VENTA
   datasource:
     url: jdbc:mysql://localhost:3306/db_ventas?createDatabaseIfNotExist=true
     username: root

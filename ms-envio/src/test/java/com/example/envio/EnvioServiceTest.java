@@ -1,10 +1,7 @@
 package com.example.envio;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 import java.util.List;
 import java.util.Map;
@@ -23,10 +20,12 @@ import com.example.envio.Model.DTO.DestinoDTO;
 import com.example.envio.Model.DTO.TransporteDTO;
 import com.example.envio.Repository.EnvioRepository;
 import com.example.envio.Service.EnvioService;
-@ActiveProfiles("test")
+
 @SpringBootTest
+@ActiveProfiles("test")
 public class EnvioServiceTest {
-@Autowired
+
+    @Autowired
     private EnvioService envioService;
 
     @MockBean
@@ -40,19 +39,39 @@ public class EnvioServiceTest {
 
     @Test
     public void testGuardar() {
-        Envio envio = new Envio();
+
+        Envio envio = new Envio(
+                1L,
+                "48 horas",
+                "12345678-9",
+                1L,
+                1L
+        );
 
         when(envioRepository.save(envio)).thenReturn(envio);
 
         Envio saved = envioService.save(envio);
 
         assertNotNull(saved);
+        assertEquals(1L, saved.getId());
+        assertEquals("48 horas", saved.getTiempoEstimado());
+        assertEquals("12345678-9", saved.getRutReceptor());
+        assertEquals(1L, saved.getIdDestino());
+        assertEquals(1L, saved.getIdTransporte());
+
         verify(envioRepository, times(1)).save(envio);
     }
 
     @Test
     public void testListar() {
-        Envio envio = new Envio();
+
+        Envio envio = new Envio(
+                1L,
+                "48 horas",
+                "12345678-9",
+                1L,
+                1L
+        );
 
         when(envioRepository.findAll()).thenReturn(List.of(envio));
 
@@ -60,36 +79,65 @@ public class EnvioServiceTest {
 
         assertNotNull(envios);
         assertEquals(1, envios.size());
+        assertEquals("48 horas", envios.get(0).getTiempoEstimado());
+        assertEquals("12345678-9", envios.get(0).getRutReceptor());
     }
 
     @Test
     public void testBuscarPorId() {
+
         Long id = 1L;
-        Envio envio = new Envio();
+
+        Envio envio = new Envio(
+                id,
+                "48 horas",
+                "12345678-9",
+                1L,
+                1L
+        );
 
         when(envioRepository.findById(id)).thenReturn(Optional.of(envio));
 
-        Envio found = envioService.findById(id);    
+        Envio found = envioService.findById(id);
 
         assertNotNull(found);
+        assertEquals(id, found.getId());
+        assertEquals("48 horas", found.getTiempoEstimado());
+        assertEquals("12345678-9", found.getRutReceptor());
+
         verify(envioRepository, times(1)).findById(id);
     }
 
     @Test
     public void testActualizar() {
-        Envio envio = new Envio();
+
+        Envio envio = new Envio(
+                1L,
+                "24 horas",
+                "11111111-1",
+                2L,
+                2L
+        );
 
         when(envioRepository.save(envio)).thenReturn(envio);
 
         Envio updated = envioService.update(envio);
 
         assertNotNull(updated);
+        assertEquals("24 horas", updated.getTiempoEstimado());
+        assertEquals("11111111-1", updated.getRutReceptor());
+        assertEquals(2L, updated.getIdDestino());
+        assertEquals(2L, updated.getIdTransporte());
+
         verify(envioRepository, times(1)).save(envio);
     }
 
     @Test
     public void testEliminar() {
+
         Long id = 1L;
+
+        doNothing().when(envioRepository).deleteById(id);
 
         envioService.deleteById(id);
 
@@ -98,11 +146,16 @@ public class EnvioServiceTest {
 
     @Test
     public void testObtenerEnvioConDetalles() {
+
         Long id = 1L;
 
-        Envio envio = new Envio();
-        envio.setIdDestino(1L);
-        envio.setIdTransporte(1L);
+        Envio envio = new Envio(
+                id,
+                "48 horas",
+                "12345678-9",
+                1L,
+                1L
+        );
 
         DestinoDTO destinoDTO = new DestinoDTO();
         TransporteDTO transporteDTO = new TransporteDTO();
@@ -123,4 +176,3 @@ public class EnvioServiceTest {
         verify(transporteFeignClient, times(1)).getTransporteById(1L);
     }
 }
-

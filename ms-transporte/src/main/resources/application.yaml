@@ -1,6 +1,6 @@
 spring:
   application:
-    name: transporte
+    name: TRANSPORTE
   datasource:
     url: jdbc:mysql://localhost:3306/db_transportes?createDatabaseIfNotExist=true
     username: root

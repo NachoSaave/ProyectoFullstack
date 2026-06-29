@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Envio
+    name: ENVIO
   datasource:
     url: jdbc:mysql://localhost:3306/db_envios?createDatabaseIfNotExist=true
     username: root
