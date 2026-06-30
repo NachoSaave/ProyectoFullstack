@@ -21,6 +21,7 @@ Base de Datos: MySQL (incluye datos de prueba pre-cargados).
 # Microservicios y Endpoints
 
 $
+
 8080 - API Gateway (Puerto padre)
 
 8081 - Clientes (/api/v1/clientes)
@@ -44,6 +45,7 @@ $
 8090 - Envíos (/api/v1/envios)
 
 8761 - Eureka Server (http://localhost:8761/)
+
 $
 
 # Comunicación entre Servicios (FeignClient)
