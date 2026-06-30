@@ -45,7 +45,7 @@ public class EnvioService {
     public Envio findById(Long id) {
         return repo.findById(id).orElse(null);
     }
-
+    //buscar por id con detalle completo
     public Map<String, Object> obtenerEnvioConDetalles(Long id) {
         Envio envio = repo.findById(id).orElse(null);
             

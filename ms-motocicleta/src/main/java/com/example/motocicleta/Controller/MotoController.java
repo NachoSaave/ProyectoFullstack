@@ -3,6 +3,7 @@ package com.example.motocicleta.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,5 +47,11 @@ public class MotoController {
     public Moto actualizar(@PathVariable Long id, @RequestBody Moto moto){
         log.info("INFORMACION: Actualizando moto con id: {} y datos: {}", id, moto.toString());
         return serv.guardar(moto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Long id){
+        log.info("INFORMACION: Moto eliminada con id: {}", id);
+        serv.eliminar(id);
     }
 }

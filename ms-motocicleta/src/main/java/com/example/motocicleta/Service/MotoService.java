@@ -34,4 +34,8 @@ public class MotoService {
         return repo.save(moto);
     }
 
+    public void eliminar(Long id){
+        repo.deleteById(id);
+    }
+
 }

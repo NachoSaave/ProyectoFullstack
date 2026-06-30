@@ -53,7 +53,6 @@ public class EnvioController {
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         log.info("INFORMACION: Se elimina envio de id {}", id);
-
         serv.deleteById(id);
     }
 }

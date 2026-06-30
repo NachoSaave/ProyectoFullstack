@@ -18,6 +18,11 @@ public class DestinoService {
         return repo.save(destino);
     }
 
+    //listar todos
+    public List<Destino> getAll(){
+        return repo.findAll();
+    }
+
     //listar por id
     public Destino getDestinoById(Long id) {
         return repo.findById(id).orElse(null);

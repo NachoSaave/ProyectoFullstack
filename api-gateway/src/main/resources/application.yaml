@@ -38,7 +38,7 @@ spring:
           uri: lb://NOTIFICACION
           predicates:
             - Path=/api/v1/notificaciones/**
-
+          
         - id: factura
           uri: lb://FACTURA
           predicates:

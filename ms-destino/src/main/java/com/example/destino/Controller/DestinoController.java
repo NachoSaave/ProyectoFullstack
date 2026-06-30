@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.destino.Model.Destino;
 import com.example.destino.Service.DestinoService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Slf4j
 @RestController
@@ -29,6 +31,12 @@ public class DestinoController {
         log.info("INFORMACION: Se solicita destino por id: {}", id);
         return serv.getDestinoById(id);
     }
+
+    @GetMapping
+    public List<Destino> getAll(Destino des) {
+        return serv.getAll();
+    }
+    
 
     @PostMapping
     public Destino saveDestino(@RequestBody Destino destino) {
