@@ -1,46 +1,67 @@
-# ProyectoFullstack
-Este proyecto es sobre una agencia/empresa de venta de motos, basada en arquitectura de datos en microservicios. Va incluído dentro del proyecto lo que es el procesamiento pagos en Venta la cuál extrae datos de cliente, inventario, moto y pago. Envío trabaja con extracción de datos de transporte y destino.
+# Proyecto Fullstack - Agencia de Motos
+Sistema integral para la gestión y venta de motocicletas basado en una arquitectura de microservicios.
 
-Este proyecto fue creado por Matías Mendoza Tilleria y José Saavedra Pacheco.
+<Autores: Matías Mendoza Tilleria y José Saavedra Pacheco.
 
-Lista puertos en uso:
+# Características y Tecnologías
+Arquitectura: Microservicios con API Gateway como punto de entrada.
 
-  http://localhost:8081/api/v1/clientes
-  
-  http://localhost:8082/api/v1/motos
-  
-  http://localhost:8083/api/v1/inventory
-  
-  http://localhost:8084/api/v1/ventas
-  
-  http://localhost:8085/api/v1/pagos
-  
-  http://localhost:8086/api/v1/notificaciones
-  
-  http://localhost:8087/api/v1/facturas
-  
-  http://localhost:8088/api/v1/transportes
-  
-  http://localhost:8089/api/v1/destino
-  
-  http://localhost:8090/api/v1/envios
-  
+Service Discovery: Los servicios se registran automáticamente usando Eureka Server.
 
-Microservicios con Feign ("getters")
+Comunicación Interna: Implementada con OpenFeign.
 
-  Venta - Extrae datos de Cliente, Inventario, Moto y Pago.
+Configuración: Archivos application.yml en todos los proyectos.
 
-  Envio - Extrae datos de Transporte y Destino
+Documentación: APIs documentadas con Swagger.
 
-  Factura - Extrae datos de Cliente
-  
-  Pago - Extrae datos de Cliente
+Trazabilidad: Logs gestionados con Log4j2 (registros en la carpeta LOGS-log4j2).
 
-Procedimiento:
-El proyecto se debe ejecutar acorde a su orden de puertos (No es obligatorio, pero se recomienda para su comprensión) con la creación de objetos hecha a través de POSTMAN y su visualización a través de MySQL (Preferentemente MySQL Workbench). (Para comprobar todos los metodos de controller, debe comprobarse con los url declarados a través de POSTMAN)
+Base de Datos: MySQL (incluye datos de prueba pre-cargados).
 
-Ahora los ms están actuando con eureka (puerto automatico), para verlas en eureka, hay que iniciar eureka-server.
+# Microservicios y Endpoints
 
-Todos los microservicios cuentan con log (Ver folder LOGS-log4j2), eureka (http://localhost:8761) y swanger.
+$
+8080 - API Gateway (Puerto padre)
 
-Todos cuentan con YAML
+8081 - Clientes (/api/v1/clientes)
+
+8082 - Motos (/api/v1/motos)
+
+8083 - Inventario (/api/v1/inventory)
+
+8084 - Ventas (/api/v1/ventas)
+
+8085 - Pagos (/api/v1/pagos)
+
+8086 - Notificaciones (/api/v1/notificaciones)
+
+8087 - Facturas (/api/v1/facturas)
+
+8088 - Transportes (/api/v1/transportes)
+
+8089 - Destino (/api/v1/destino)
+
+8090 - Envíos (/api/v1/envios)
+
+8761 - Eureka Server (http://localhost:8761/)
+$
+
+# Comunicación entre Servicios (FeignClient)
+Para completar los procesos, ciertos microservicios consumen información de otros:
+
+Venta: Extrae datos de Cliente, Inventario, Moto y Pago.
+
+Envío: Extrae datos de Transporte y Destino.
+
+Factura: Extrae datos de Cliente.
+
+Pago: Extrae datos de Cliente.
+
+# Procedimiento de Ejecución y Pruebas
+Iniciar Eureka Server: Es obligatorio iniciarlo primero (puerto 8761) para que los demás servicios puedan registrarse.
+
+Iniciar Microservicios: Se recomienda levantarlos en orden según su puerto (8080 al 8090) para facilitar el seguimiento.
+
+Peticiones HTTP: Utilizar Postman para interactuar con los endpoints (GET, POST, PUT, DELETE). Las pruebas a los controladores deben hacerse mediante las URLs declaradas.
+
+Validación de Datos: Usar MySQL (preferentemente MySQL Workbench) para visualizar la creación correcta de los objetos y sus relaciones.
